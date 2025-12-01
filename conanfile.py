@@ -23,9 +23,9 @@ class LibraryRecipe(ConanFile):
         # Define how the consumer links against the library
         self.cpp_info.includedirs = ["include"]
         self.cpp_info.libdirs = ["lib"]
-        self.cpp_info.libs = ["fastech_ezimotion_plusR"]
+        self.cpp_info.libs = ["fastech_ezimotion_plusr"]
         # Define the CMake component name used in the consumer's CMakeLists.txt
-        self.cpp_info.set_property("cmake_target_name", "fastech_ezimotion_plusR::fastech_ezimotion_plusR")
+        self.cpp_info.set_property("cmake_target_name", "fastech_ezimotion_plusr::fastech_ezimotion_plusr")
 
     def package(self):
         # Select architecture folder based on the consumer's settings
