@@ -29,12 +29,12 @@ class FastechEziMotionPlusRConan(ConanFile):
             raise Exception(f"Unsupported architecture: {target_arch}")
 
         # Copy header files from the source folder
-        header_src = f"{self.recipe_folder}/{arch_folder}"
+        header_src = f"{self.source_folder}/{arch_folder}"
         self.output.info(f"Copying headers from: {header_src}")
         copy(self, "*.h", src=header_src, dst=f"{self.package_folder}/include", keep_path=True)
 
         # Copy the shared library (.so)
-        lib_src = f"{self.recipe_folder}/{arch_folder}"
+        lib_src = f"{self.source_folder}/{arch_folder}"
         self.output.info(f"Copying libraries from: {lib_src}")
         copy(self, "*.so*", src=lib_src, dst=f"{self.package_folder}/lib", keep_path=False)
 
